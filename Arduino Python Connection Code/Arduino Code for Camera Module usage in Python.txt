@@ -1,0 +1,24 @@
+const int ledPin = 13; // LED connected to GPIO 13
+char input;
+
+void setup() {
+  Serial.begin(9600);
+  pinMode(ledPin, OUTPUT);
+}
+
+void loop() {
+  if (Serial.available() > 0) {
+    input = Serial.read();
+    Serial.print("Received: ");
+    Serial.println(input);
+
+    if (input == '4') {
+      digitalWrite(ledPin, HIGH); // Turn on LED
+      Serial.println("LED turned ON");
+    } else {
+      digitalWrite(ledPin, LOW); // Turn off LED
+      Serial.println("LED turned OFF");
+    }
+  }
+}
+
