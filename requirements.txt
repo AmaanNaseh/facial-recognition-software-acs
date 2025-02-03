@@ -1,0 +1,10 @@
+pytk
+pillow
+opencv-python
+opencv-contrib-python
+imutils
+times
+numpy
+scikit-learn
+urllib3
+pyserial
